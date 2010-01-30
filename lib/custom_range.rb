@@ -41,9 +41,7 @@ class EndPoint
   end
   
   def value_type(value)
-    kind = [Integer, String, Symbol].find {|type| value.kind_of? type}.to_s.downcase
-    puts kind
-    return kind
+    [Integer, String, Symbol].find {|type| value.kind_of? type}.to_s.downcase
   end
   
   def to_s
